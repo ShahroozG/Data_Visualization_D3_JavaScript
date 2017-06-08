@@ -83,7 +83,7 @@
           // Story descriptions
           var discrip1 = svg.append("g")
                             .attr('class', 'discrip percent')
-                            .attr('transform', "translate(" + (margin + 8) + ",275)")
+                            .attr('transform', "translate(" + (margin + 88) + ",275)")
               discrip1.append('text')
                       .text("18% of Total Casualties")
 
@@ -95,7 +95,7 @@
 
           var discrip3 = svg.append("g")
                             .attr('class', 'discrip percent')
-                            .attr('transform', "translate(" + (margin + 980) + ",395)")
+                            .attr('transform', "translate(" + (margin + 970) + ",395)")
               discrip3.append('text')
                       .text("10% of Total Casualties")
         }
