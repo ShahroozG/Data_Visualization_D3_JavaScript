@@ -4,7 +4,7 @@
 Udacity-DAND
 Shahrooz Govahi
 
-**Summary**
+**Summary**  
 In this project I visualized the number of casualties in major wars and revolutions in all over the world after year 1900 till 2017. By 'major' I mean more than 100,000 death tolls. First audiance will see all data points together and then the animation will show different regions related data points and at the end the audiance has the option to choose a region and see what was the casualties in that region in this time period. I found out there is 3 different time intervals: 1900-1930; 1930-1975; 1975-2017
 
 **Design**
