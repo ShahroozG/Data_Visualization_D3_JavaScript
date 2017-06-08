@@ -1,0 +1,74 @@
+
+    h2 {
+      text-align: center;
+    }
+
+    circle {
+      opacity: 0.7;
+    }
+
+    .axis {
+      font-family : arial;
+      font-size: 1.3em;
+    }
+
+    .axis line {
+      stroke: black;
+    }
+    .x.axis path {
+      fill: none;
+      shape-rendering: crispEdges;
+    }
+
+    .y.axis line,
+    .y.axis path {
+        fill: none;
+        stroke: #000
+    }
+
+    .label{
+      font-size: 0.9em;
+    }
+
+    .discrip.percent{
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    .region_buttons{
+      font-size: 1em;
+    }
+
+    .regions_total{
+      font-size: 1em;
+    }
+
+    div.region_buttons{
+      position: fixed;
+      top:40px;
+      left: 1080px;
+    }
+
+    div.regions_total{
+      position: fixed;
+      top:38px;
+      left: 1185px;
+    }
+
+    div.region_buttons div{
+      padding: 3px;
+      margin: 4px;
+      /*border: black;
+      border-style: solid;
+      border-width: 1px;*/
+    }
+
+    div.regions_total div{
+      padding: 3px;
+      margin: 4px;
+    }
+
+    line{
+     stroke-width:2;
+     stroke:#696969;
+    }

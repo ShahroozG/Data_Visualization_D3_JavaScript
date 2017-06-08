@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    circle {
+      opacity: 0.9;
+    }
+
+    .axis {
+      font-family : arial;
+      font-size: 1.5em;
+    }
+
+    .axis line {
+      stroke: black;
+    }
+
+    .x.axis path {
+      fill: none;
+      /*stroke: black;*/
+      shape-rendering: crispEdges;
+    }
+
+    .y.axis line,
+    .y.axis path {
+        fill: none;
+        stroke: #000
+    }
+
+    .label{
+      font-size: 0.9em;
+    }
+
+    .discrip{
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    .legend{
+      font-size: 0.9em;
+    }
+  </style>
+
+  <script type="text/javascript">
+      function draw(data) {
+      /*
+        D3.js setup code
+      */
+
+          "use strict";
+          var margin = 80,
+              width = 1330 - margin,
+              height = 530 - margin;
+
+          var casualty_max = d3.max(data, function(d){
+            return d['casualty_million'];
+          });
+
+          var radius = d3.scale.sqrt()
+                         .domain([0, casualty_max])
+                         .range([0, 70]);
+
+          //adding title to graph
+            d3.select('body')
+              .append('h1')
+              .text("Major Wars & Revolutions Casualties (1900 - 2017)")
+
+          //building the svg part as a container
+          var svg = d3.select("body")
+                      .append("svg")
+                      .attr("width", width + margin)
+                      .attr("height", height + margin)
+                      .append('g')
+                      .attr('class','chart');
+
+        // Circles Colors base on region
+        function continent_color(d){
+                if (d == "Africa" | d == "Africa: 24.3 Million"){
+                  return 'Orange';
+                } else if (d == "Asia" | d == "Asia: 14.9 Million"){
+                  return 'Indigo';
+                } else if (d == "South or Central America" |
+                  d == "South or Central America: 0.9 Million"){
+                  return '#00ffbf';
+                } else if (d == "Russia" | d == "Russia: 19.2 Million"){
+                  return '#ffb3b3';
+                } else if (d == "China" | d == "China: 56 Million"){
+                  return '#0080ff';
+                } else if (d == "Middle East" | d == "Middle East: 5.1 Million"){
+                  return '#ff0080';
+                } else if (d == 'Europe' | d == "Europe: 17 Million"){
+                  return '#80ff00';
+                } else {
+                  return 'red';
+                }
+        };
+
+        // defining time_axis and adding it to the page
+         var time_extent = d3.extent(data, function(d){
+              return d['end_year'];
+         });
+
+         var time_scale = d3.time.scale()
+             .range([margin, width])
+             .domain(time_extent);
+
+         var time_axis = d3.svg.axis()
+                           .scale(time_scale)
+                           .ticks(d3.time.years, 10)
+
+         d3.select("svg")
+           .append('g')
+           .attr('class', 'x axis')
+           .attr('transform', "translate(0," + (height + 20) + ")")
+           .call(time_axis);
+
+        // defining count_axis and adding it to the page
+         var count_extent = d3.extent(data, function(d){
+              return d['casualty_million'];
+         });
+
+         var count_scale = d3.scale.linear()
+                             .range([height, margin])
+                             .domain(count_extent);
+
+         var count_axis = d3.svg.axis()
+                            .scale(count_scale)
+                            .orient("left")
+                            .tickFormat(d3.format("s"));
+         d3.select("svg")
+           .append('g')
+           .attr('class', 'y axis')
+           .attr('transform', "translate(" + (margin - 10) + ",0)")
+           .call(count_axis);
+
+         // adding circles and tooltiop for each circle
+          d3.select('svg')
+            .selectAll('circle')
+            .data(data.sort(function(a, b) {
+              return b['casualty_million'] - a['casualty_million'];
+            }))
+            .enter()
+            .append('circle')
+            .attr('cx', function(d){return time_scale(d['end_year']);})
+            .attr('cy', function(d){return count_scale(d['casualty_million']);})
+            .attr('r', function(d){return radius(d['casualty_million']);})
+            .attr('fill', function(d){return continent_color(d['region']);})
+            .append('svg:title')
+            .text(function(d){return d['title'] + ":" + d['casualty_million']
+                  + " Million"})
+
+        //adding y axis label
+        var ylabel = svg.append("g")
+                        .attr('class', 'y label')
+                        .attr('transform', 'translate(10, 60)')
+
+        ylabel.append('text')
+              .text("Death tolls in Millions")
+
+        //adding a discription about total casualties
+        var discrip = svg.append("g")
+                        .attr('class', 'discrip')
+                        .attr('transform', "translate(" + (width - 200) + ",270)")
+
+        discrip.append('text')
+              .text("Total Casualties ~ 210 Million")
+
+        //grouping data with nest
+
+        var nested = d3.nest()
+                       .key(function(d){return d['region'];})
+                       .entries(data)
+
+        function update(region){
+          var filtered = nested.filter(function(d){return d['key'] === region;})
+
+          var circles = svg.selectAll('circle')
+                           .data(filtered[0].values)
+          circles.exit().remove();
+
+          circles.enter()
+                 .append('circle')
+                 .attr('cx', function(d){return time_scale(d['end_year']);})
+                 .attr('cy', function(d){return count_scale(d['casualty_million']);})
+                 .attr('r', function(d){return radius(d['casualty_million']);})
+                 .attr('fill', function(d){return continent_color(d['region']);})
+
+        }
+
+        var region_idx = 0;
+        var regions = ["South or Central America", "Middle East", "Asia", "Europe",
+                       "Russia", "Africa", "China", "World"];
+
+        var region_interval = setInterval(function(){
+
+          update(regions[region_idx]);
+
+          region_idx++;
+
+          if(region_idx >= regions.length){
+            clearInterval(region_interval);
+          }
+        }, 1000);
+
+
+
+        //adding legend
+        var legend = svg.append("g")
+                        .attr("class", "legend")
+                        .attr("transform", "translate(" + (width - 200) + ",20)")
+                        .selectAll("g")
+                        .data(["World War I, II : 80 Million", "China: 56 Million",
+                          "Africa: 24.3 Million", "Russia: 19.2 Million", "Europe: 17 Million",
+                          "Asia: 14.9 Million", "Middle East: 5.1 Million",
+                          "South or Central America: 0.9 Million"])
+                        .enter()
+                        .append("g");
+
+        legend.append("circle")
+              .attr("cy", function(d, i){
+                return i * 30;
+              })
+              .attr("r", 5)
+              .attr("fill", function(d){return continent_color(d)})
+
+        legend.append("text")
+              .attr("y", function(d, i){
+                return i * 30 + 5;
+              })
+              .attr("x", 15)
+              .text(function(d){
+                return d;
+              });
+      }
+      </script>
+  </head>
+<body>
+  <script type="text/javascript">
+  /*
+    pass the contents of csv file to the draw function
+    */
+  format = d3.time.format("%Y");
+  d3.csv("Casualties_MoreThan_OneHundred.csv", function(d){
+    d['end_year'] = format.parse(d['end_year']);
+    d['casualty_million'] = +d['casualty_million'];
+    return d;
+    }, draw);
+  </script>
+</body>
+</html>

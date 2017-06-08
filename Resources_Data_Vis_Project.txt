@@ -1,0 +1,9 @@
+Resources
+1. Data Set resource:
+ http://www.scaruffi.com/politics/massacre.html
+2. Data Set resource:
+https://www.wikipedia.org
+2. Data Visualization Codes-Udacity
+https://classroom.udacity.com/nanodegrees/nd002/parts/00213454010/modules/318423863275460/lessons/3066258748/concepts/31058086880923
+3. Code snippets:
+https://bl.ocks.org/mbostock

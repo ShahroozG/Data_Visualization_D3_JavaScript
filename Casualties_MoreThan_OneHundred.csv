@@ -1,0 +1,76 @@
+idx,start_year,end_year,title,country_1,country_2,casualty_1,casualty_million,category,region
+1,1900,1900,Null,Null,Null,0,0,Null,Asia
+2,1899,1902,British-Boer war ,South Africa,England,100000,0.1,Independence War,Africa
+3,1899,1903,Colombian Civil war ,Colombia,Null,120000,0.12,Civil War,South America
+4,1904,1905,Japan vs Russia War,Japan ,Russia ,150000,0.15,War,Asia
+5,1886,1908,Congo Free State vs Belgium,Belgium,Congo,8000000,8,Independence War,Africa
+6,1911,1911,Chinese Revolution ,China,Null,2400000,2.4,Revolution,China
+7,1912,1913,Balkan wars ,Balkan,Null,150000,0.15,Independence War,Europe
+8,1916,1916,Kyrgyz revolt against Russia,Russia,Null,120000,0.12,Independence War,Asia
+9,1914,1918,World War I ,World,Null,20000000,20,World War,"World War I,II"
+10,1910,1919,Mexican Revolution ,Mexican,Null,250000,0.25,Revolution,South America
+11,1918,1920,Russian Civil war ,Russian,Null,1000000,1,Civil War,Russia
+12,1917,1921,Soviet Revolution ,Russia,Null,5000000,5,Revolution,Russia
+13,1915,1923,Ottoman Genocide ,Turkey,Null,2500000,2.5,Genocide,Middle East
+14,1931,1931,Japanese Manchurian War ,Japan,China,1100000,1.1,War,Asia
+15,1932,1933,Ukraine vs Soviet Union,Russia,Ukraine ,10000000,10,War,Europe
+16,1934,1934,China-Mao's Long March ,China,Null,170000,0.17,Revolution,China
+17,1932,1935,"Bolivia vs Paraguay-""Guerra del Chaco"" ",Bolivia,Paraguay,117500,0.1175,War,South America
+18,1936,1936,Italy's invasion of Ethiopia ,Italy,Ethiopia,200000,0.2,Independence War,Africa
+19,1928,1937,Chinese Civil war ,China,Null,2000000,2,Civil War,China
+20,1936,1937,Russia-Stalin's purges ,Russia,Null,13000000,13,Dictatorship,Russia
+21,1936,1939,Spanish Civil war ,Spain,Null,600000,0.6,Civil War,Europe
+22,1937,1945,Japanese invasion of China ,Japan,China,500000,0.5,War,Asia
+23,1939,1945,World War II ,World,Null,60000000,60,World War,"World War I,II"
+24,1941,1945,Europe-Holocaust ,Germany,Null,6000000,6,Genocide,Europe
+25,1947,1947,Partition of India and Pakistan , India,Pakistan ,1000000,1,War,Asia
+26,1946,1949,Chinese civil war ,China,Null,1200000,1.2,Civil War,China
+27,1949,1950,Mainland China vs Tibet ,China,Null,1200000,1.2,Independence War,China
+28,1950,1953,Korean war ,North Korea,South Korea,3000000,3,War,Asia
+29,1946,1954,France vs Vietnam war ,France,Vietnam,600000,0.6,War,Asia
+30,1948,1958,Colombian civil war ,Colombia,Null,250000,0.25,Civil War,South America
+31,1958,1961,"China-Mao's ""Great Leap Forward""",China,Null,38000000,38,Genocide,China
+32,1954,1962,French vs Algerian war ,France,Algeria,368000,0.368,Independence War,Africa
+33,1965,1966,Indonesian civil war ,Indonesian,Null,250000,0.25,Civil War,Asia
+34,1966,1969,"China-Mao's ""Cultural Revolution"" ",Mao's,Null,11000000,11,Revolution,China
+35,1967,1970,Nigeria-Biafra Civil war ,Nigeria-Biafra,Null,800000,0.8,Independence War,Africa
+36,1971,1971,Pakistan-Bangladesh civil war ,Pakistan,Bangladesh,500000,0.5,Civil War,Asia
+37,1955,1972,First Sudanese Civil War,Sudane,Null,500000,0.5,Civil War,Africa
+38,1972,1972,Burundi's civil war ,Burundi,Null,300000,0.3,Civil War,Africa
+39,1964,1973,USA vs Vietnam war ,USA-Vietnam,Null,3000000,3,Independence War,Asia
+40,1975,1978,"Ethiopia Revolution, Mengitsu",Ethiopia,Null,1500000,1.5,Revolution,Africa
+41,1969,1979,"Uganda Revolution, Idi Amin",Uganda,Null,300000,0.3,Revolution,Africa
+42,1975,1980,"Cambodia Revolution, Khmer Rouge",Cambodia ,Null,1700000,1.7,Genocide,Asia
+43,1975,1985,Lebanon Civil War ,Lebanon,Null,130000,0.13,Civil War,Middle East
+44,1975,1987,Laos' Civil war ,Laos,Null,184000,0.184,Civil War,Asia
+45,1979,1986,Afghanistan  invaded by Soviet Union,Russia,Afghanistan,1300000,1.3,War,Asia
+46,1980,1988,Iraq vs Iran war ,Iraq,Iran,1250000,1.25,War,Middle East
+47,1975,1989,"Vietnam, Boat people During USA vs Vietnam war ",Vietnam,Null,250000,0.25,Independence War,Asia
+48,1974,1991,Ethiopian Civil war ,Ethiopia,Null,1000000,1,Civil War,Africa
+49,1976,1993,Mozambique's Civil war ,Mozambique,Null,900000,0.9,Civil War,Africa
+50,1994,1994,Rwanda's Civil war ,Rwanda,Null,900000,0.9,Civil War,Africa
+51,1960,1996,Guatemala's Civil war ,Guatemala's,Null,200000,0.2,Civil War,South America
+52,1992,1996,Yugoslavian wars ,Yugoslavia,Null,260000,0.26,Civil War,Europe
+53,1989,1997,First Liberian Civil war ,Liberia,Null,500000,0.5,Civil War,Africa
+54,1991,1997,Congo's Civil war ,Congo,Null,800000,0.8,Civil War,Africa
+55,1993,1997,Congo Brazzaville's Civil war ,Congo,Null,100000,0.1,Civil War,Africa
+56,1961,1998,Indonesia vs West Papua/Irian ,Indonesia ,Null,100000,0.1,War,Asia
+57,1976,1998,Indonesia-East Timor civil war ,Indonesia,Null,600000,0.6,Civil War,Asia
+58,1992,1999,Algerian Civil war ,Algeria,Null,150000,0.15,Civil War,Africa
+59,1991,2000,Sierra Leone's Civil war ,Sierra Leone,Null,200000,0.2,Civil War,Africa
+60,1988,2001,Afghanistan Civil war ,Afghanistan,Null,400000,0.4,Civil War,Asia
+61,1975,2002,Angolan Civil War ,Angola,Null,500000,0.5,Civil War,Africa
+62,1983,2002,Second Sudanese Civil war ,Sudan,Null,2000000,2,Civil War,Africa
+63,1961,2004,Kurds vs Iraq ,Iraq,Null,180000,0.18,Civil War,Middle East
+64,1998,2003,"Congo/Zaire's war - Rwanda and Uganda vs Zimbabwe, Angola and Namibia ",Rwanda,Zimbabwe,3800000,3.8,War,Africa
+65,1999,2003,Second Liberian Civil War,Liberia,Null,175000,0.175,Civil War,Africa
+66,1988,2004,Somalia's Civil war ,Somalia,Null,550000,0.55,Civil War,Africa
+67,1993,2005,Burundi's Civil war ,Burundi,Null,200000,0.2,Civil War,Africa
+68,1991,2010,Russia-Chechnya Civil war ,Russia,Null,200000,0.2,Civil War,Russia
+69,2003,2009,Sudan vs JEM/Darfur ,Sudan ,Null,300000,0.3,War,Africa
+70,2003,2011,Second Iraq-USA war,Iraq,USA,160000,0.16,War,Middle East
+71,1972,2014,Philippines vs Muslim separatists ,Philippines ,Null,150000,0.15,Civil War,Asia
+72,2011,2015,Iraq's Civil war after the withdrawal of the USA ,Iraq,Null,500000,0.5,Civil War,Middle East
+73,1966,2016,Colombia's Civil war ,Colombia,Null,200000,0.2,Civil War,Africa
+74,2012,2017,Syria's Civil war ,Syria's,Null,400000,0.4,Civil War,Middle East
+75,2020,2020,Null,Null,Null,0,0,Null,Null

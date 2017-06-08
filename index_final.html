@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="war_casualties_final.css" />
+  <script type="text/javascript" src="war_casualties_final.js"></script>
+
+</head>
+
+<body>
+  <script type="text/javascript">
+  /*
+    pass the contents of csv file to the draw function
+    */
+
+  d3.csv("Casualties_MoreThan_OneHundred.csv", function(d){
+    d['end_year'] = +d['end_year'];
+    d['casualty_million'] = +d['casualty_million'];
+    return d;
+    }, draw);
+  </script>
+</body>
+</html>
