@@ -35,7 +35,10 @@ I'd suggest to have a textbox that changes for each region."
 In respond to these feedbacks I merge the legend and buttons part. So I save some space and create a more clear picture. Moreover I found out the 20th centurey first 30 years is like a starting point for many conflicts and revolutions. Years between 1930 and 1975 are the worst years and 72% of all casualties happened in this 45 years. It seems after that world understand war and revolution is not an appropriate way for change, so in the recent 42 years only 10% of total casualties happened. Unfortunately the most damaged region in the third interval is Africa. You can see after 1975 there are no war or revolution in many regions.
 I didn't add a textbox for each region, because I beleive the visualization should talk itself and adding text to it is not an appropriate way, unless that's the only way we can convey an idea. By adding the vertical dashed lines, I draw my audiance attention to a story about the whole world and not specific regions. It shows there is trend all over the world in three different time periods.
 
-In final version I added three vertical background colors for three significant time intervals. I've added a simple text above each shaded region on the chart to show the big difference between share of each of them in total casualties.  
+In final version I added three vertical background colors for three significant time intervals. I've added a simple text above each shaded region on the chart to show the big difference between share of each of them in total casualties.
+
+Link to final Visualization:
+http://bl.ocks.org/ShahroozG/raw/cfe751bac8fd640a9025f0a3e0c60308/
 
 **Resources**  
 1. Data Set resource:
